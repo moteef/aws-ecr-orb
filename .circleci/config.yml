@@ -38,7 +38,7 @@ workflows:
 
       - orb-tools/publish-dev:
           context: orb-publishing
-          orb-name: circleci/aws-ecr
+          orb-name: orbies/aws-ecr
           requires: [orb-tools/pack]
 
       - orb-tools/trigger-integration-tests-workflow:
