@@ -154,6 +154,7 @@ workflows:
           bot-token-variable: GHI_TOKEN
           bot-user: cpe-bot
           fail-if-semver-not-indicated: true
+          publish-version-tag: false
           filters:
             branches:
               only: master
