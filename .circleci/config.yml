@@ -142,7 +142,7 @@ workflows:
           requires: [integration-tests-skip-when-tags-exist-populate-image]
 
       - orb-tools/dev-promote-prod-from-commit-subject:
-          orb-name: circleci/aws-ecr
+          orb-name: orbies/aws-ecr
           context: orb-publishing
           add-pr-comment: true
           bot-token-variable: GHI_TOKEN
