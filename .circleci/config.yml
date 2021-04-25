@@ -53,6 +53,7 @@ workflows:
 
       - aws-ecr/push-helm-chart:
           name: integration-tests-helm-chart-named-profile
+          context: orb-publishing
           attach-workspace: true
           workspace-root: workspace
           profile-name: testing
@@ -66,6 +67,7 @@ workflows:
 
       - aws-ecr/push-helm-chart:
           name: integration-tests-helm-chart-default-profile
+          context: orb-publishing
           attach-workspace: true
           workspace-root: workspace
           repo: aws-ecr-orb-${CIRCLE_SHA1:0:7}-default-profile
@@ -78,6 +80,7 @@ workflows:
 
       - aws-ecr/build-and-push-image:
           name: integration-tests-default-profile
+          context: orb-publishing
           attach-workspace: true
           workspace-root: workspace
           repo: aws-ecr-orb-${CIRCLE_SHA1:0:7}-default-profile
@@ -92,6 +95,7 @@ workflows:
 
       - aws-ecr/build-and-push-image:
           name: integration-tests-named-profile
+          context: orb-publishing
           attach-workspace: true
           workspace-root: workspace
           profile-name: testing
@@ -110,6 +114,7 @@ workflows:
 
       - aws-ecr/build-and-push-image:
           name: integration-tests-skip-when-tags-exist-populate-image
+          context: orb-publishing
           attach-workspace: true
           workspace-root: workspace
           repo: aws-ecr-orb-${CIRCLE_SHA1:0:7}-skip-when-tags-exist
@@ -126,6 +131,7 @@ workflows:
 
       - aws-ecr/build-and-push-image:
           name: integration-tests-skip-when-tags-exist
+          context: orb-publishing
           attach-workspace: true
           workspace-root: workspace
           repo: aws-ecr-orb-${CIRCLE_SHA1:0:7}-skip-when-tags-exist
