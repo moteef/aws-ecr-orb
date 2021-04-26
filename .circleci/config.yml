@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   orb-tools: circleci/orb-tools@9.0
-  aws-ecr: orbies/aws-ecr@1.0.5
+  aws-ecr: orbies/aws-ecr@dev:alpha
 
 # Pipeline parameters
 parameters:
